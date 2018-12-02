@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Mandelbrot</title>
+        <meta charset="utf-8">
+        <style>
+            #canvas
+            {
+                border: 2px solid white;
+            }
+
+            #canvas-div
+            {
+                float: left;
+            }
+
+            p
+            {
+                color: white;
+                font-size: 30px;
+                text-align: center
+            }
+        </style>
+
+        <script src="scripts/main.js" defer="true"></script>
+    </head>
+
+        <div id="canvas-div">
+            <canvas id="canvas" width="600" height="600"></canvas>
+        </div><body style = "background-color: black">
+
+        <p>Iteration Offset <input id="range" type="range" min="0" max = 300 value="0"></p>
+        <p> Move with arrow keys <br> X to zoom in and Y to zoom out</p>
+
+    </body>
+</html>
