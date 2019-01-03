@@ -97,14 +97,14 @@ function update()
         let zoomFactor = Math.pow(zoomRatio / 1.02, zoomInCount) ;
         let zoomSquare = canvas.width * zoomFactor;
 
-        let posOffset = Math.floor((canvas.width - zoomSquare) / 2); 
+        let posOffset = (canvas.width - zoomSquare) / 2; 
 
         for(let y = 0; y < canvas.height; y++)
         {
             for(let x = 0; x < canvas.width; ++x)
             {
                 let index = (x + y * canvas.width) * 4;
-                let copyIndex = ((Math.floor(x * zoomFactor) + posOffset) + (Math.floor(y * zoomFactor) + posOffset) * canvas.width) * 4;
+                let copyIndex = ((Math.floor(x * zoomFactor + posOffset)) + (Math.floor(y * zoomFactor + posOffset)) * canvas.width) * 4;
 
                 image.data[index] = imageCopy.data[copyIndex];
                 image.data[index + 1] = imageCopy.data[copyIndex + 1];
