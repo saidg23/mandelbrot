@@ -68,7 +68,7 @@ function update()
 
                 if(escapes)
                 {
-                    let fraction = escapeIteration / (maxIterations + iterationOffset);
+                    let fraction = (Math.sin(escapeIteration) + 1) / 2;
                     let pixelColor = interpolateColors(colors, fraction);
 
                     let index = (x + y * canvas.width) * 4;
